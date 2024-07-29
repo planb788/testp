@@ -20,7 +20,7 @@ class Main:
     """
     def __init__(self, context: Context) -> None:
         self.context = context
-        self.context.register_commands("helloworld", "helloworld", "内置测试指令。", 1, self.helloworld)
+        self.context.register_commands("testp", "testp", "内置测试指令。", 1, self.helloworld)
 
     """
     指令处理函数。
@@ -28,5 +28,5 @@ class Main:
     - 需要接收两个参数：message: AstrMessageEvent, context: Context
     - 返回 CommandResult 对象
     """
-    def helloworld(self, message: AstrMessageEvent, context: Context):
-        return CommandResult().message("Hello, World!")
+    def testp(self, message: AstrMessageEvent, context: Context):
+        return CommandResult().message("测试")
